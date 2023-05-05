@@ -3,7 +3,7 @@ package logica;
 import javax.swing.JOptionPane;
 
 public class Encargado extends Usuario {
-	String id_encargado; 
+	private String id_encargado; 
 	
 	
 	
@@ -49,7 +49,7 @@ public class Encargado extends Usuario {
 
 	@Override
 	public String toString() {
-		return super.toString() + "\nid_encargado=" + id_encargado + "]";
+		return super.toString() + "\nid_encargado: " + id_encargado;
 	}
 	
 	

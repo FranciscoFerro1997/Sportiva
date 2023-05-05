@@ -15,7 +15,7 @@ public class Vendedor extends Usuario {
 
 	@Override
 	public String toString() {
-		return "Vendedor [id_vendedor=" + id_vendedor + "]";
+		return super.toString() + "\nid_vendedor: " + id_vendedor;
 	}
 	
 	

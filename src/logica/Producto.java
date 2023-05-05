@@ -1,11 +1,11 @@
 package logica;
 
 public class Producto {
-	String id_producto;
-	String tipo_producto;
-	String nombre;
-	double precio;
-	int cantidad;
+	private String id_producto;
+	private String tipo_producto;
+	private String nombre;
+	private double precio;
+	private int cantidad;
 	
 	
 	public Producto(String id, String tipo, String nombre, double p, int cant) {
@@ -76,6 +76,24 @@ public class Producto {
 
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "\nInfo producto: \nid_producto: " + id_producto + "\ntipo_producto: " + tipo_producto + "\nnombre: " + nombre
+				+ "\nprecio: " + precio + "\ncantidad: " + cantidad;
 	}
 	
 	

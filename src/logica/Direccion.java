@@ -4,10 +4,10 @@ public class Direccion {
 
 	private String num;
 	private String calle;
-	private int cp;
+	private String cp;
 	private String localidad;
 	
-	public Direccion(String n, String c, int cp, String l) {
+	public Direccion(String n, String c, String cp, String l) {
 		num=n;
 		calle=c;
 		this.cp=cp;
@@ -31,10 +31,10 @@ public class Direccion {
 	public void setCalle(String calle) {
 		this.calle = calle;
 	}
-	public int getCp() {
+	public String getCp() {
 		return cp;
 	}
-	public void setCp(int cp) {
+	public void setCp(String cp) {
 		this.cp = cp;
 	}
 	public String getLocalidad() {
@@ -47,7 +47,7 @@ public class Direccion {
 	
 	@Override
 	public String toString() {
-		return "Direccion [num=" + num + ", calle=" + calle + ", cp=" + cp + ", localidad=" + localidad + "]";
+		return "\nDireccion: \nnum: " + num + "\ncalle: " + calle + "\ncodigo postal: " + cp + "\nlocalidad: " + localidad;
 	}
 	
 }

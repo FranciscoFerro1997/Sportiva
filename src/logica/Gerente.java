@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Gerente extends Usuario {
 	
-	String id_gerente;
+	private String id_gerente;
 	
 	
 	
@@ -106,7 +106,7 @@ public class Gerente extends Usuario {
 
 	@Override
 	public String toString() {
-		return   super.toString() + "\nid_gerente=" + id_gerente;
+		return   super.toString() + "\nid_gerente: " + id_gerente;
 	}
 	
 	

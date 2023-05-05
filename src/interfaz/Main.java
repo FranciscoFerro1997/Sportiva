@@ -1,34 +1,75 @@
 package interfaz;
 
 import java.util.LinkedList;
-
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import logica.Deposito;
+import logica.Direccion;
 import logica.Encargado;
 import logica.Gerente;
+import logica.Producto;
+import logica.Sucursal;
 import logica.Usuario;
 import logica.Vendedor;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Usuario users[] = new Usuario[10];
-		Gerente g[] = new Gerente[10];
-		Vendedor v[] = new Vendedor[10];
+		
 		String selec;
 		int seleccion;
-		
-		Gerente g1 = new Gerente("Juan Gil Navarro","40566554","asdasd@hotmail.com","1234","3");
-		Gerente g2 = new Gerente("Juan Navarro","40566554","asdasd@hotmail.com","4321","3");
+		Direccion d1 = new Direccion("12","32","23","localidad");
+		Vendedor v1 = new Vendedor("Juan Navarro","40566554","asdasd@hotmail.com","4321","1");
+		Vendedor v2 = new Vendedor("Juan NaVarro","40566554","asdasd@hotmail.com","4321","2");
+		Vendedor v3 = new Vendedor("Juan Nabarro","40566554","asdasd@hotmail.com","4321","3");
+		Gerente g1 = new Gerente("Juan Nabaro","40566554","asdasd@hotmail.com","4321","1");
+
 		Encargado e1 = new Encargado("Juan Navarro","40566554","asdasd@hotmail.com","4321","3");
 		e1.setLogin(true);
 		
 		
-		LinkedList<Gerente> ge = new LinkedList<Gerente> ();
+
+		// Testeo de listas
+		
+		Deposito dep = new Deposito("1", new ArrayList<Producto>());
+		
+		Sucursal s1 = new Sucursal("1",d1,dep,e1,g1,new LinkedList<Vendedor>());
+		s1.getVendedores().add(v3);
+		s1.getVendedores().add(v2);
+		s1.getVendedores().add(v1);
+		
+		dep.getListaProductos().add( new Producto("1","calzado","Jordan",39.99,34));
+		dep.getListaProductos().add( new Producto("2","remera","Jordan",35.99,5));
+		dep.getListaProductos().add( new Producto("3","pantalon","Jordan",37.99,14));
+		dep.getListaProductos().add( new Producto("4","gorra","Jordan",38.99,10));
+		
+		String info="";
+		String infoS="";
+		for (Producto listaproductos : dep.getListaProductos()) {
+			info = info + listaproductos + "\n";
+		}
+		
+		JOptionPane.showMessageDialog(null, info);
 		
 		
-	//	Deposito deposito = new Deposito(null, null); 
+		for (Vendedor listaVendedores : s1.getVendedores()) {
+			infoS = infoS + listaVendedores + "\n";
+		}
+		
+		JOptionPane.showMessageDialog(null, infoS);
+		
+		
+		
+		//JOptionPane.showMessageDialog(null, dep.toString());
+		System.out.println(s1.toString());
+		
+
+		// Testeo de funcionalidades de usuarios
+		
+	/*	
+		
+
 
 		do {
 			
@@ -91,6 +132,7 @@ public class Main {
 					}
 					
 				 	*/ 
+		/*
 					g1.editarUsuario();
 					
 					
@@ -141,7 +183,7 @@ public class Main {
 
 		
 		
-
+*/
 		
 		
 		

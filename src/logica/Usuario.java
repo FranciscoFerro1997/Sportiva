@@ -92,8 +92,8 @@ public abstract class Usuario  {
 
 	@Override
 	public String toString() {
-		return "Informacion del empleado: \nnombre= " + nombre + "\nDNI= " + dni + "\nEmail= " + email
-				+ "\nContraseña= " + clave;
+		return "\nInformacion del empleado: \nnombre: " + nombre + "\nDNI: " + dni + "\nEmail: " + email
+				+ "\nContraseña: " + clave;
 	}
 	
 	

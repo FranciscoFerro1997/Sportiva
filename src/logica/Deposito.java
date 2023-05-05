@@ -1,16 +1,17 @@
 package logica;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Deposito {
-	String id_deposito;
-	LinkedList<Producto> listaProductos;
+	private String id_deposito;
+	private ArrayList<Producto> listaProductos;
 
-	public Deposito(String id, LinkedList<Producto> lista) {
+	public Deposito(String id, ArrayList<Producto> lista) {
 		id_deposito=id;
-		listaProductos=lista;
+		listaProductos = new ArrayList<>(lista);
 		
 	}
+
 
 	public String getId_deposito() {
 		return id_deposito;
@@ -20,18 +21,24 @@ public class Deposito {
 		this.id_deposito = id_deposito;
 	}
 
-	public LinkedList<Producto> getListaProductos() {
+	public ArrayList<Producto> getListaProductos() {
 		return listaProductos;
 	}
 
-	public void setListaProductos(LinkedList<Producto> listaProductos) {
+	public void setListaProductos(ArrayList<Producto> listaProductos) {
 		this.listaProductos = listaProductos;
+	}
+
+
+	@Override
+	public String toString() {
+		return "\nInfo deposito: \nid_deposito: " + id_deposito + "\nlistaProductos: " + listaProductos;
 	} 
 	
-	public void agregarProductos(Producto p) {
+	/* public void agregarProductos(Producto p) {
 		listaProductos.add(1,p);
 		
-	}
+	} */
 	
 	
 }
