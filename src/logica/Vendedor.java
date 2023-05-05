@@ -6,8 +6,8 @@ public class Vendedor extends Usuario {
 	
 	
 	
-	public Vendedor(String n, String dni, String e, String u, String c, String id) {
-		super(n,dni,e,u,c);
+	public Vendedor(String n, String dni, String e,  String c, String id) {
+		super(n,dni,e,c);
 		id_vendedor= id;
 	}
 
